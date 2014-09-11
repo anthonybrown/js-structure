@@ -691,7 +691,7 @@ footer#main-footer {
       }
 }
 
-@media only screen and (min-width: 35.5em) and (orientation: landscape) {
+@media only screen and (min-width: 33.5em) and (orientation: landscape) {
   /* Style adjustments for viewports 568px and over go here */
 
 .go-top {
