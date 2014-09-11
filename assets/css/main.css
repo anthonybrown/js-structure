@@ -595,7 +595,7 @@ footer#main-footer {
    Modify as content requires.
    ========================================================================== */
 
-@media only screen and (min-width: 24em) and (orientation: landscape) {
+@media only screen and (min-width: 28em) and (orientation: landscape) {
   /* Style adjustments for viewports 480px and over go here */
 
 .go-top {
