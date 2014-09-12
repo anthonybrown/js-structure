@@ -41,69 +41,70 @@
           <div id="output"></div>
           <div id="output2"></div>
           <pre class='prettyprint code'>
-            // non closure function
-            window.onload = function () {
-              var output = document.getElementById('output');
-              var closure = myClosure();
+  // non closure function
+  window.onload = function () {
+    var output = document.getElementById('output');
+    var closure = myClosure();
 
-              output.innerHTML = nonClosure();
+    output.innerHTML = nonClosure();
 
-              window.setTimeout(function () {
-                output.innerHTML += '&lt;br /&gt;' + nonClosure();
-              }, 500);
+    window.setTimeout(function () {
+      output.innerHTML += '&lt;br /&gt;' + nonClosure();
+    }, 500);
 
 
-              window.setTimeout(function () {
-                output.innerHTML += '&lt;br /&gt;' + closure();
-              }, 500);
-            };
+    window.setTimeout(function () {
+      output.innerHTML += '&lt;br /&gt;' + closure();
+    }, 500);
+  };
 
-            function nonClosure () {
-              var date = new Date();
-              return date.getMilliseconds();
-            }
+  function nonClosure () {
+    var date = new Date();
+    return date.getMilliseconds();
+  }
 
-            function myClosure () {
-              var date = new Date();
-              return function () {
-                return date.getMilliseconds();
-              };
-            }
+  function myClosure () {
+    var date = new Date();
+    return function () {
+      return date.getMilliseconds();
+    };
+  }
 
-            // this is another way
-            // this is called the revealing module pattern
-            window.onload = function () {
-            var output  = document.getElementById('output'),
-                closure = new myClosure2();
+  // this is another way
+  // this is called the revealing module pattern
+  window.onload = function () {
+  var output  = document.getElementById('output'),
+      closure = new myClosure2();
 
-            output.innerHTML = closure.mill();
+  output.innerHTML = closure.mill();
 
-            window.setTimeout(function () {
-              output.innerHTML += '&lt;br&gt;'+closure.mill();
-            }, 500);
+  window.setTimeout(function () {
+    output.innerHTML += '&lt;br&gt;'+closure.mill();
+  }, 500);
 
-              // MomentJS date and time function
-              var datetime = null,
-                    date = null;
+  // MomentJS date and time function
+  var datetime = null,
+        date = null;
 
-              // this is the function that updates the time
-              var update = function () {
-                // add a Date object to our date variable
-                date = moment(new Date());
-                // set the datetime variable with jQuery's html to update the DOM with
-                // our new formatted date
-                datetime.html(date.format('dddd, MMMM Do YYYY, h:mm:ss a'));
-              };
+  // this is the function that updates the time
+  var update = function () {
+    // add a Date object to our date variable
+    date = moment(new Date());
+    // set the datetime variable with
+    //jQuery's html to update the DOM with
+    // our new formatted date
+    datetime.html(date.format('dddd, MMMM Do YYYY, h:mm:ss a'));
+  };
 
-                // add the formatted date to the page
-                // using jQuery to target a DOM element
-                // with an ID of 'datetime'
-                datetime = $('#datetime');
-                // execute our update function
-                update();
-                // call our update function every
-                // second
-                setInterval(update, 1000);
+  // add the formatted date to the page
+  // using jQuery to target a DOM element
+  // with an ID of 'datetime'
+  datetime = $('#datetime');
+  // execute our update function
+  update();
+  // call our update function every
+  // second
+  setInterval(update, 1000);
           </pre>
         </div>
       </div>
