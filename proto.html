@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Structuring JavaScript</title>
+    <meta name='description' content=''>
+    <meta name='author' content=''>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="stylesheet" href="assets/css/tomorrow-night.css">
+    <link rel='stylesheet' href='assets/css/main.css'>
+     <script src='assets/js/libs/prettify.js'></script>
+     <script src='assets/js/libs/moment.js'></script>
+  </head>
+  <body>
+    <div id="wrapP" class='clearfix'>
+      <header>
+        <div class='center'>
+          <h1>structure.</h1>
+          <p>
+            closures, namespaces and other tools to keep our code manageable
+          </p>
+        </div>
+      </header>
+      <div id="nav-bar" class="nav-bar">
+        <div class='center'>
+          <nav>
+            <ul>
+              <li><a href="index.html">structure</a></li>
+              <li><a href="proto.html">prototype</a></li>
+              <li><a href="#">ex-three</a></li>
+              <li><a href="#">ex-four</a></li>
+              <li><a href="#">ex-five</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div id="main-content">
+        <div class='center'>
+          <h1>Prototype Pattern</h1>
+          <div id="output"></div>
+          <div id="output2"></div>
+          <pre class='prettyprint code'>
+            var Calculator = function (eq) {
+              this.eqCtl   = document.getElementById(eq);
+            };
+
+            Calculator.prototype = {
+              add: function (x, y) {
+                var val = x + y;
+                this.eqCtl.innerHTML =  val;
+              }
+            }
+          </pre>
+        </div>
+      </div>
+    </div>
+
+    <footer id="main-footer" class='clearfix'>
+      <div class="center">
+        <p>Copyright 2014 &copy; Tony Brown Design and Developement</p>
+         <p id='datetime'></p>
+         <a class='go-top' href="#top">go top</a>
+      </div>
+    </footer>
+
+    <script src='assets/js/libs/jquery.js'></script>
+    <script src='assets/js/libs/underscore.js'></script>
+    <script src='assets/js/libs/backbone.js'></script>
+    <script src='assets/js/libs/marionette.js'></script>
+    <script src='assets/js/app.js'></script>
+  </body>
+</html>
