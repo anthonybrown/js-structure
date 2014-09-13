@@ -820,7 +820,6 @@ a.menu-link {
       background-color: #333;
       color: #f1f1f1;
       text-align: left;
-      padding: 1em;
     }
       #main-footer p {
         font-size: 0.625em;
@@ -997,7 +996,6 @@ nav[role=navigation] li a {
       background-color: #333;
       color: #f1f1f1;
       text-align: left;
-      padding: 1em;
     }
       #main-footer p {
         font-size: 0.825em;
