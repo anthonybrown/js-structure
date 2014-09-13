@@ -501,6 +501,7 @@ p  { font-size: 1em }
 
 .center {
   width: 88%;
+  max-width: 1240px;
   height: auto;
   margin: 0 auto;
 }
