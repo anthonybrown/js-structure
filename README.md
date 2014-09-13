@@ -12,4 +12,8 @@ adventurous type and want to do it differently.
 The design was done in the browser so I will have to redo the css later
 to modernize it so to speak.
 
-
+### todos
+1. Fix responsive media query for iphone 5S.
+2. Finish the tutorial.
+3. Integrate with Blog.
+4. Tweak Navigation Styles (although this isn't about styling, I can't have my work looking sloppy.)
