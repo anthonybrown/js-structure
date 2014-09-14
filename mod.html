@@ -9,6 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <link rel="stylesheet" href="assets/css/tomorrow-night.css">
     <link rel='stylesheet' href='assets/css/main.css'>
+    <link rel='stylesheet' href='assets/css/calc.css'>
     <script src='assets/js/libs/modernizr.js'></script>
     <script src='assets/js/libs/prettify.js'></script>
     <script src='assets/js/libs/moment.js'></script>
@@ -41,6 +42,42 @@
       <div id="main-content" role='main'>
         <div class='center'>
           <h1>Module Pattern</h1>
+        <h2>Using the Module Pattern to create a calculator</h2>
+        <!-- Note: I prefer to wire up event handlers via code in "real life" apps
+             but in this case I decided to do it in HTML just to allow the focus to stay
+             on patterns. -->
+        <div class="calculator">
+            <div class="calculatorHead">
+                <div id="eq" class="equation"></div>
+                <div id="currNumber" class="currentNumber">0</div>
+            </div>
+            <div class='row'>
+                <div class="num button">7</div>
+                <div class="num button">8</div>
+                <div class="num button">9</div>
+                <div id='divide'class="button" onclick="calc.setOperator('/');">/</div>
+                <div class="clr button rowspan2" onclick="calc.clearNumbers();">C</div>
+            </div>
+            <div class='row'>
+                <div class="num button">4</div>
+                <div class="num button">5</div>
+                <div class="num button">6</div>
+                <div id='multi' class="button" onclick="calc.setOperator('*');">*</div>
+            </div class='row'>
+            <div class='row'>
+                <div class="num button">1</div>
+                <div class="num button">2</div>
+                <div class="num button">3</div>
+                <div id='min' class="button" onclick="calc.setOperator('-')">-</div>
+                <div id='eql' class="button rowspan2" onclick="calc.setOperator('=');">=</div>
+            </div class='row'>
+            <div class='row'>
+                <div class="num button colspan2">0</div>
+                <div class="num button">.</div>
+                <div id='add' class="button" onclick="calc.setOperator('+');">+</div>
+            </div>
+        </div>
+
           <div id="eq"></div>
           <div id="output"></div>
           <div id="output2"></div>
